@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ Football Quiz Game</title>
+    <link rel="stylesheet" type="text/css" href="QuizStyle.css">
+</head>
+<body>
+    <!-- Front Page -->
+    <div class="first">
+        <h1 class="quizTitle">كويز الفريق الوطني الجزائري</h1>
+        <p>!هل أنت مشجع حقيقي؟ اختبر معلوماتك الآن</p>
+        <img class="DZimage" onclick="start()" src="https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(webp):focal(1416x707:1418x705)/origin-imgresizer.eurosport.com/2019/06/30/2629368-54410050-2560-1440.jpg">
+        <div class="flex2">
+        <div class="arrow animated"></div>
+        <p>إضغط على الصورة للبدأ</p>
+        </div>
+    </div>
+    
+    <!-- Loading Animation -->
+    <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+        <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+    </svg>
+    
+    <!-- Quiz Questions and Arranging -->
+    <div class="container">
+    
+        <!-- Question 1 : -->
+        <div class="Question-title"><p>:السؤال الأول</p></div>
+    
+        <fieldset class="Question-box">
+        <p class="question">متى تأسس فريق جبهة التحرير الوطني؟</p><hr>
+    
+        <div class="flex">
+            <input type="radio" id="answer11" name="question1">
+            <label for="answer11" class="button1">1954</label>
+            <input type="radio" id="answer12" name="question1">
+            <label for="answer12" class="button2">1957</label>
+        </div>
+        <input type="radio" id="answer13" name="question1">
+        <label for="answer13" class="button3">1958</label> 
+        </fieldset>
+        <!-- Next Question -->
+        <button class="submit" id="submit" onclick="next(1)">السؤال الموالي</button>
+    
+        <!-- Question 2 : -->
+        <div class="Question-title" ><p>:السؤال الثاني</p></div>
+    
+        <fieldset class="Question-box">
+        <p class="question">من هو المدرب الذي فاز بكأس افريقيا 1990 ؟</p><hr>
+        
+        <div class="flex">
+            <input type="radio" id="answer21" name="question2">
+            <label for="answer21" class="button1">عبد الحميد كرمالي</label>
+            <input type="radio" id="answer22" name="question2">
+            <label for="answer22" class="button2">رابح سعدان</label>
+        </div>
+        <input type="radio" id="answer23" name="question2">
+        <label for="answer23" class="button3">رشيد مخلوفي</label>
+        </fieldset>
+        <!-- Next Question -->
+        <button class="submit" id="submit" onclick="next(2)">السؤال الموالي</button>
+    
+        <!-- Question 3 : -->
+        <div class="Question-title"><p>:السؤال الثالث</p></div>
+    
+        <fieldset class="Question-box">
+        <p class="question">أي لاعب يعد أحسن هداف في تاريخ المنتخب ؟</p><hr>
+        
+        <div class="flex">
+            <input type="radio" id="answer31" name="question3">
+            <label for="answer31" class="button1">إسلام سليماني</label>
+            <input type="radio" id="answer32" name="question3">
+            <label for="answer32" class="button2">لخضر بلومي</label>
+        </div>
+        <input type="radio" id="answer33" name="question3">
+        <label for="answer33" class="button3">عبدالحفيظ تاسفاوت</label>   
+        </fieldset>
+        <!-- Next Question -->
+        <button class="submit" id="submit" onclick="next(3)">السؤال الموالي</button>
+    
+        <!-- Question 4 : -->
+        <div class="Question-title"><p>:السؤال الرابع</p></div>
+    
+        <fieldset class="Question-box">
+        <p class="question">في كأس العالم 2014، من سجل هدفا ضد روسيا الذي سمح للتأهل لـأول مرة في تاريخ المنتخب الى الدور الثمن النهائي؟</p><hr>
+        
+        <div class="flex">
+            <input type="radio" id="answer41" name="question4">
+            <label for="answer41" class="button1">سفيان فغولي</label>
+            <input type="radio" id="answer42" name="question4">
+            <label for="answer42" class="button2">إسلام سليماني</label>
+        </div>
+        <input type="radio" id="answer43" name="question4">
+        <label for="answer43" class="button3">عبد المؤمن جابو</label>   
+        </fieldset>
+        <!-- Check Answers -->
+        <button class="submit" id="submit" onclick="result()">تحقق من إجاباتك</button>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="QuizScript.js">
+    </script>
+</body>
+</html>
